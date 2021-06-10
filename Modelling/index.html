@@ -13,14 +13,14 @@
         <meta name="author" content="peaceiris">
       
       
-        <link rel="canonical" href="https://mkdocs.peaceiris.com/material-for-mkdocs/">
+        <link rel="canonical" href="https://mkdocs.peaceiris.com/Modelling/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.7">
     
     
       
-        <title>Material for MkDocs - Web Mining (Resume)</title>
+        <title>Modelling (Materi 4) - Web Mining (Resume)</title>
       
     
     
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#material_for_mkdocs" class="md-skip">
+        <a href="#modelling_materi_4" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Material for MkDocs
+              Modelling (Materi 4)
             
           </span>
         </div>
@@ -267,11 +267,88 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Modelling/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Modelling (Materi 4)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Modelling (Materi 4)
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modelling_materi_4" class="md-nav__link">
+    Modelling (materi 4)
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelling (materi 4)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cara_kerja_algoritma" class="md-nav__link">
+    Cara Kerja Algoritma
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load_data_set" class="md-nav__link">
+    Load Data Set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memisahkan_data" class="md-nav__link">
+    Memisahkan Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model_untuk_k_5" class="md-nav__link">
+    Model Untuk K = 5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluasi_model_untuk_k_5" class="md-nav__link">
+    Evaluasi Model untuk K = 5
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -292,8 +369,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -302,16 +377,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mkdocs" class="md-nav__link">
-    MkDocs
+  <a href="#modelling_materi_4" class="md-nav__link">
+    Modelling (materi 4)
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelling (materi 4)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cara_kerja_algoritma" class="md-nav__link">
+    Cara Kerja Algoritma
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#material_for_mkdocs_1" class="md-nav__link">
-    Material for MkDocs
+        
+          <li class="md-nav__item">
+  <a href="#load_data_set" class="md-nav__link">
+    Load Data Set
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memisahkan_data" class="md-nav__link">
+    Memisahkan Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model_untuk_k_5" class="md-nav__link">
+    Model Untuk K = 5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluasi_model_untuk_k_5" class="md-nav__link">
+    Evaluasi Model untuk K = 5
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -327,22 +436,65 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/peaceiris/mkdocs-material-boilerplate/edit/master/docs_sample/material-for-mkdocs.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/peaceiris/mkdocs-material-boilerplate/edit/master/docs_sample/Modelling.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="material_for_mkdocs">Material for MkDocs<a class="headerlink" href="#material_for_mkdocs" title="Permanent link">&para;</a></h1>
-<h2 id="mkdocs">MkDocs<a class="headerlink" href="#mkdocs" title="Permanent link">&para;</a></h2>
+                  <h1>Modelling (Materi 4)</h1>
+                
+                <h3 id="modelling_materi_4">Modelling (materi 4)<a class="headerlink" href="#modelling_materi_4" title="Permanent link">&para;</a></h3>
+<p>Pemodelan pengguna (<em>User Modeling</em>) merupakan subdivisi dari interkaso manusia dan komputer yang menggambarkan proses membangun dan memodifikasi pemahaman konseptual pengguna dimana tujuan dari pemodelan ini adalah penyesuaian dan adaptasi sistem dengan kebutuhan spesifik dari pengguna</p>
+<h4 id="cara_kerja_algoritma"><strong>Cara Kerja Algoritma</strong><a class="headerlink" href="#cara_kerja_algoritma" title="Permanent link">&para;</a></h4>
+<p>Dalam Algoritma KNN, K adalah jumlah tetangga terdekat, dimana jumlah tetangga dalah faktor penentu inti. K umumnya merupakan bilangan ganjil jika jumlah kelas adalah 2, dan bila K = 1 maka algoritma tersebut dikenal dengan nama algoritma tetangga terdekat. Algoritma K-NN memiliki tahaban sebagai berikut :</p>
 <ul>
-<li><a href="https://github.com/mkdocs/mkdocs/">mkdocs/mkdocs: Project documentation with Markdown - GitHub</a></li>
+<li>Menghitung Jarak</li>
+<li>Menentukan tetangga terdekat</li>
+<li>Memberi suara untuk label</li>
 </ul>
-<h2 id="material_for_mkdocs_1">Material for MkDocs<a class="headerlink" href="#material_for_mkdocs_1" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://github.com/squidfunk/mkdocs-material">squidfunk/mkdocs-material: A Material Design theme for MkDocs</a></li>
-</ul>
-<!-- Internal References -->
-<!-- External References -->
+<h4 id="load_data_set">Load Data Set<a class="headerlink" href="#load_data_set" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1">#Import scikit-learn dataset library</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span>
+
+<span class="c1">#Load dataset</span>
+<span class="n">wine</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;TF-IDF.csv&quot;</span><span class="p">)</span>
+
+<span class="n">wine</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+
+<h4 id="memisahkan_data"><strong>Memisahkan Data</strong><a class="headerlink" href="#memisahkan_data" title="Permanent link">&para;</a></h4>
+<p>Mari kita pisahkan dataset dengan menggunakan fungsi train_test_split(). Anda harus melewati 3 parameter fitur, target, dan ukuran test_set. Selain itu, Anda dapat menggunakan random_state untuk memilih catatan secara acak.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Import train_test_split function</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+
+<span class="c1"># Split dataset into training set and test set</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">wine</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">wine</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span> <span class="c1"># 70% training and 30% test</span>
+</code></pre></div>
+
+<h4 id="model_untuk_k_5"><strong>Model Untuk K = 5</strong><a class="headerlink" href="#model_untuk_k_5" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="c1">#Import knearest neighbors Classifier model</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+
+<span class="c1">#Create KNN Classifier</span>
+<span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="c1">#Train the model using the training sets</span>
+<span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1">#Predict the response for test dataset</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</code></pre></div>
+
+<h4 id="evaluasi_model_untuk_k_5"><strong>Evaluasi Model untuk K = 5</strong><a class="headerlink" href="#evaluasi_model_untuk_k_5" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="c1">#Import scikit-learn metrics module for accuracy calculation</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
+
+<span class="c1"># Model Accuracy, how often is the classifier correct?</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy:&quot;</span><span class="p">,</span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+</code></pre></div>
                 
               
               
@@ -358,6 +510,26 @@
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../TF-IDF/" class="md-footer__link md-footer__link--prev" aria-label="Previous: TF-IDF (Materi 3)" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              TF-IDF (Materi 3)
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

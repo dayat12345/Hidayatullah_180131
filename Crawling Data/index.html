@@ -13,14 +13,14 @@
         <meta name="author" content="peaceiris">
       
       
-        <link rel="canonical" href="https://mkdocs.peaceiris.com/material-for-mkdocs/">
+        <link rel="canonical" href="https://mkdocs.peaceiris.com/Crawling%20Data/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.7">
     
     
       
-        <title>Material for MkDocs - Web Mining (Resume)</title>
+        <title>Crawling Data - Web Mining (Resume)</title>
       
     
     
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#material_for_mkdocs" class="md-skip">
+        <a href="#crawling_data_materi_1" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Material for MkDocs
+              Crawling Data
             
           </span>
         </div>
@@ -292,8 +292,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -302,16 +300,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mkdocs" class="md-nav__link">
-    MkDocs
+  <a href="#crawling_data_materi_1" class="md-nav__link">
+    Crawling Data (materi 1)
+  </a>
+  
+    <nav class="md-nav" aria-label="Crawling Data (materi 1)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crawling_menggunakan_python" class="md-nav__link">
+    Crawling Menggunakan Python
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#material_for_mkdocs_1" class="md-nav__link">
-    Material for MkDocs
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -327,22 +331,39 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/peaceiris/mkdocs-material-boilerplate/edit/master/docs_sample/material-for-mkdocs.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/peaceiris/mkdocs-material-boilerplate/edit/master/docs_sample/Crawling Data.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="material_for_mkdocs">Material for MkDocs<a class="headerlink" href="#material_for_mkdocs" title="Permanent link">&para;</a></h1>
-<h2 id="mkdocs">MkDocs<a class="headerlink" href="#mkdocs" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://github.com/mkdocs/mkdocs/">mkdocs/mkdocs: Project documentation with Markdown - GitHub</a></li>
-</ul>
-<h2 id="material_for_mkdocs_1">Material for MkDocs<a class="headerlink" href="#material_for_mkdocs_1" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://github.com/squidfunk/mkdocs-material">squidfunk/mkdocs-material: A Material Design theme for MkDocs</a></li>
-</ul>
-<!-- Internal References -->
-<!-- External References -->
+                  <h1>Crawling Data</h1>
+                
+                <h3 id="crawling_data_materi_1">Crawling Data (materi 1)<a class="headerlink" href="#crawling_data_materi_1" title="Permanent link">&para;</a></h3>
+<p>Sebenarnya untuk mendapatkan data twitter ada beberapa cara, di antaranya Scraping &amp; Crawling. Dan pada saat tulisan ini dibuat untuk Scraping data twitter sudah tidak dapat dilakukan, hal itu dikarenakan selector <em>class</em> dan <em>id</em> HTML di Twitter selalu berubah-ubah.</p>
+<h4 id="crawling_menggunakan_python">Crawling Menggunakan Python<a class="headerlink" href="#crawling_menggunakan_python" title="Permanent link">&para;</a></h4>
+<p>Untuk crawling data twitter kita akan menggunakan library <a href="https://www.tweepy.org/"><strong>Tweepy</strong></a><strong>.</strong> Untuk menginstall Tweepy via pip</p>
+<p><code>pip install tweepy</code></p>
+<p>Sebagai contoh kita ingin crawling data twitter dengan kata kunci <em><strong>python*</strong> dengan tweet yang dibuat pada antara tanggal 01 januari 2021 s/d 10 januari 2021 dengan maksimal jumlah tweet adalah 100, kita juga akan </em>exluced retweet,* sehingga retweet tidak akan di tampilkan. Lalu hasil crawling akan disimpan dengan format .csv</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">tweepy</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="n">access_token</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+<span class="n">access_token_secret</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+<span class="n">consumer_key</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+<span class="n">consumer_key_secret</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+<span class="n">auth</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">OAuthHandler</span><span class="p">(</span><span class="n">consumer_key</span><span class="p">,</span><span class="n">consumer_key_secret</span><span class="p">)</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">API</span><span class="p">(</span><span class="n">auth</span><span class="p">)</span>
+<span class="c1"># Open/create a file to append data to</span>
+<span class="n">csvFile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;nama-file.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="c1">#Use csv writer</span>
+<span class="n">csvWriter</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">csvFile</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Cursor</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">search</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="s1">&#39;#Python -filter:retweets&#39;</span><span class="p">,</span> <span class="n">tweet_mode</span><span class="o">=</span><span class="s1">&#39;extended&#39;</span><span class="p">,</span><span class="n">lang</span><span class="o">=</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="n">since</span><span class="o">=</span><span class="s1">&#39;2021-01-01&#39;</span><span class="p">,</span> <span class="n">until</span><span class="o">=</span><span class="s1">&#39;2021-01-10&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">tweet</span><span class="o">.</span><span class="n">full_text</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">tweet</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">name</span>
+    <span class="n">created</span> <span class="o">=</span> <span class="n">tweet</span><span class="o">.</span><span class="n">created_at</span>
+    <span class="n">csvWriter</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="n">created</span><span class="p">,</span> <span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">),</span> <span class="n">user</span><span class="p">])</span>
+<span class="n">csvWriter</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">csvFile</span><span class="p">)</span>
+<span class="n">csvFile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
                 
               
               
